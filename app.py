@@ -1,10 +1,12 @@
 import pandas as pd
+# import pickle
 from pycaret.regression import load_model, predict_model
 from flask import Flask, request
 import numpy as np
 
-
-median_value_model = load_model("./gbr_model_pipeline")
+# file_name = open("./static/gbr_model_pipeline.pkl",'rb')
+# median_value_model = pickle.load(file_name)
+median_value_model = load_model("static/gbr_model_pipeline")
 
 
 app = Flask(__name__)
